@@ -1,13 +1,8 @@
-import { CreateTables } from './context/dbcontext.js';
-import express  from 'express';
+const express = require("express");
+
 const app = express();
 
-CreateTables();
-app.use(express.json);
-
-app.get('/',function(req,res){
-    res.send("Projeto Teste!!")
+app.use(express.json());
+app.listen(3030,()=>{
+    console.log("Server started on port 3030");
 })
-
-
-app.listen(3000,()=>console.log("Api Rodando"));
