@@ -1,0 +1,24 @@
+{
+  "name": "api-farmacia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+    "dev" : "nodemon src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VeronicaRibas/Projeto_Final.git"
+  },
+  "author": "Patrick Patchelli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VeronicaRibas/Projeto_Final/issues"
+  },
+  "homepage": "https://github.com/VeronicaRibas/Projeto_Final#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.18"
+  }
+}
