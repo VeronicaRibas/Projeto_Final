@@ -1,8 +1,9 @@
-import { openDb } from '../context/configdb.js';
+import {CreateTables} from '../context/dbcontext.js';
 import express  from 'express';
 const app = express();
 
-openDb();
+CreateTables();
+app.use(express.json);
 
 app.get('/',function(req,res){
     res.send("Projeto Teste!!")
