@@ -17,5 +17,31 @@ module.exports = {
         } catch (error) {
             response.status(400).send(error);
         }
+    },
+
+    async UpdateProduct(request, response) {
+        try {
+         const {name,brand ,quantity ,value ,blackBand ,redBand,yellowBand } = request.body;
+         const id = request.params.id;
+
+         const  product = await Product.findOne({where:{id}});
+
+         if(!product){
+            return response.status(400).json("Product not found!")
+         }
+
+         product.name = name;
+         product.brand = brand;
+         product.quantity = quantity;
+         product.value = value;
+         product.blackBand = blackBand;
+         product.redBand = redBand;
+         product.yellowBand = yellowBand;
+
+         await product.save();
+         response.status(201).json("Product Update")
+        } catch (error) {
+            response.status(400).send(error);
+        }
     }
 }

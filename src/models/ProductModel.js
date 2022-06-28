@@ -19,13 +19,13 @@ Product.init({
     value: {
         type: DataTypes.DECIMAL,
     },
-    BlackBand: {
+    blackBand: {
         type: DataTypes.INTEGER,
     },
-    RedBand : {
+    redBand : {
         type: DataTypes.INTEGER,
     },
-    YellowBand : {
+    yellowBand : {
         type: DataTypes.INTEGER,
         
     },
