@@ -8,5 +8,14 @@ module.exports = {
         } catch (error) {
             response.status(400).send(error);
         }
+    },
+
+    async createProduct(request, response) {
+        try {
+            await Product.create(request.body);
+            response.status(200).json("Insert Product with Successfully");
+        } catch (error) {
+            response.status(400).send(error);
+        }
     }
 }
