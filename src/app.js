@@ -1,4 +1,4 @@
-import {CreateTables} from '../context/dbcontext.js';
+import { CreateTables } from './context/dbcontext.js';
 import express  from 'express';
 const app = express();
 
