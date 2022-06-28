@@ -10,6 +10,22 @@ module.exports = {
         }
     },
 
+    async oneProduct(request, response) {
+        try {
+            const id = request.params.id
+            const  product = await Product.findOne({where:{id}});
+
+            if(!product){
+                return response.status(400).json("Product not found!")
+             }
+    
+            response.status(200).json(product);
+        } catch (error) {
+            response.status(400).send(error);
+        }
+    },
+    
+
     async createProduct(request, response) {
         try {
             await Product.create(request.body);
