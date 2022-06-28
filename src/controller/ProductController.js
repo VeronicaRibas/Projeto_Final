@@ -59,5 +59,22 @@ module.exports = {
         } catch (error) {
             response.status(400).send(error);
         }
-    }
+    },
+
+    async deleteProduct(request, response) {
+        try {
+            const id = request.params.id;
+            const  product = await Product.destroy({where:{id}});
+
+            if(!product){
+                return response.status(400).json("Product not found!")
+             }
+
+            response.status(200).json("Product Removed! ");
+        } catch (error) {
+            response.status(400).send(error);
+        }
+    },
+
+    
 }
