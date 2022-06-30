@@ -8,6 +8,14 @@ router.route("/product").get(ProductController.allProduct).post(ProductControlle
 router.route("/product/:id").get(ProductController.oneProduct).put(ProductController.UpdateProduct).delete(ProductController.deleteProduct)
 
 //Routes for the Supplier
-router.route("/supplier").post(SupplierController.createSupplier);
+router.route("/supplier")
+    .post(SupplierController.createSupplier)
+    .get(SupplierController.getAllSuppliers);
+
+router.route("/supplier/:id")
+    .get(SupplierController.getSupplier)
+    .put(SupplierController.updateSupplier)
+    .delete(SupplierController.deleteSupplier);
+
 
 module.exports = router;
