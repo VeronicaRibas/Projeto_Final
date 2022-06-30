@@ -8,7 +8,9 @@ sequelize.sync().then(()=>console.log("database connect Successfully!!!"));
 
 app.use(express.json());
 
-app.use("/products",Routes);
+//app.use("/products",Routes);
+
+app.use("/categories",Routes);
 
 app.listen(3030,()=>{
     console.log("Server started on port 3030");
