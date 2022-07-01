@@ -10,6 +10,6 @@ const router = express.Router();
 
 // Routes the of Category
 router.route("/").get(CategoryController.allCategory).post(CategoryController.createCategory);
-router.route("/:id").get(CategoryController.oneCategory).put(CategoryController.UpdateCategory)
+router.route("/:id").get(CategoryController.oneCategory).put(CategoryController.UpdateCategory).delete(CategoryController.deleteCategory)
 
 module.exports = router;

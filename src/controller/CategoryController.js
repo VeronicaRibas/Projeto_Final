@@ -54,5 +54,19 @@ async oneCategory(request, response) {
     } catch (error) {
         response.status(400).send(error);
     }
+},
+async deleteCategory(request, response) {
+    try {
+        const id = request.params.id;
+        const  category = await Category.destroy({where:{id}});
+
+        if(!category){
+            return response.status(400).json("Category not found!")
+         }
+
+        response.status(200).json("CategoryRemoved! ");
+    } catch (error) {
+        response.status(400).send(error);
+    }
 }
 }
