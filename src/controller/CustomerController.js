@@ -1,6 +1,6 @@
 const Customer = require("../models/CustomerModel");
 
-module.export = {
+module.exports = {
     async getAllCustomer(request, response) {
         try {
             const Customer = await Customer.findAll();
