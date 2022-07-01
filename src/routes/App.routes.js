@@ -36,7 +36,7 @@ router.route("/supplier/:id")
     .delete(SupplierController.deleteSupplier);
 
 // Routes of Customer
-router.route("/Customer").post(CustomerController.createCustomer);
+router.route("/customer").post(CustomerController.createCustomer);
 
 
 module.exports = router;
