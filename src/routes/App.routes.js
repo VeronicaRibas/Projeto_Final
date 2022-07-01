@@ -1,6 +1,6 @@
 const express = require ("express");
 const ProductController = require("../controller/ProductController");
-const pharmacistController = require("../controller/pharmacistController")
+const pharmacistController = require("../controller/PharmacistController")
 const router = express.Router();
 
 
