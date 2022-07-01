@@ -9,14 +9,21 @@ const router = express.Router();
 router.route("/product")
 .get(ProductController.allProduct)
 .post(ProductController.createProduct);
+
 router.route("/product/:id")
 .get(ProductController.oneProduct)
 .put(ProductController.UpdateProduct)
 .delete(ProductController.deleteProduct)
 
 // Routes the of Category
-router.route("/category").get(CategoryController.allCategory).post(CategoryController.createCategory);
-router.route("/category/:id").put(CategoryController.UpdateCategory)
+router.route("/category")
+.get(CategoryController.allCategory)
+.post(CategoryController.createCategory);
+
+router.route("/category/:id")
+.get(CategoryController.oneCategory)
+.put(CategoryController.UpdateCategory)
+.delete(CategoryController.deleteCategory)
 
 //Routes for the Supplier
 router.route("/supplier")
@@ -32,5 +39,6 @@ router.route("/supplier/:id")
 router.route("/costumer")
 .get(CustomerController.allCustomer)
 .post(CustomerController.createCustomer);
+
 
 module.exports = router;
