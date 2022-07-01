@@ -10,5 +10,6 @@ router.route("/product/:id").get(ProductController.oneProduct).put(ProductContro
 
 // Routs of Pharmacist
 router.route("/pharmacist").get(pharmacistController.allPharmacist).post(pharmacistController.createPharmacist);
+router.route("/pharmacist/:id").get(pharmacistController.onePharmacist).put(pharmacistController.updatePharmacist).delete(pharmacistController.deletePharmacist);
 
 module.exports = router;
