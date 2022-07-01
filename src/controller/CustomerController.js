@@ -1,4 +1,4 @@
-const Supplier = require("../models/CustomerModel");
+const Customer = require("../models/CustomerModel");
 
 module.exports = {
     async createCustomer(request, response) {
