@@ -8,7 +8,7 @@ sequelize.sync().then(()=>console.log("database connect Successfully!!!"));
 
 app.use(express.json());
 
-//app.use("/products",Routes);
+// app.use("/products",Routes);
 
 app.use("/categories",Routes);
 

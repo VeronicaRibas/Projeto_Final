@@ -5,10 +5,11 @@ const router = express.Router();
 
 
 // Routes the of Product
-//router.route("/").get(ProductController.allProduct).post(ProductController.createProduct);
-//router.route("/:id").get(ProductController.oneProduct).put(ProductController.UpdateProduct).delete(ProductController.deleteProduct)
+// router.route("/").get(ProductController.allProduct).post(ProductController.createProduct);
+// router.route("/:id").get(ProductController.oneProduct).put(ProductController.UpdateProduct).delete(ProductController.deleteProduct)
 
 // Routes the of Category
-router.route("/").post(CategoryController.createCategory);
+router.route("/").get(CategoryController.allCategory).post(CategoryController.createCategory);
+router.route("/:id").put(CategoryController.UpdateCategory)
 
 module.exports = router;
