@@ -9,8 +9,13 @@ router.route("/product").get(ProductController.allProduct).post(ProductControlle
 router.route("/product/:id").get(ProductController.oneProduct).put(ProductController.UpdateProduct).delete(ProductController.deleteProduct)
 
 // Routes the of Category
+<<<<<<< HEAD
 router.route("/category").get(CategoryController.allCategory).post(CategoryController.createCategory);
 router.route("/category/:id").put(CategoryController.UpdateCategory)
+=======
+router.route("/").get(CategoryController.allCategory).post(CategoryController.createCategory);
+router.route("/:id").get(CategoryController.oneCategory).put(CategoryController.UpdateCategory)
+>>>>>>> category
 
 //Routes for the Supplier
 router.route("/supplier")
