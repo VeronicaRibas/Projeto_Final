@@ -9,7 +9,8 @@ router.route("/").get(ProductController.allProduct).post(ProductController.creat
 router.route("/:id").get(ProductController.oneProduct).put(ProductController.UpdateProduct).delete(ProductController.deleteProduct)
 
 // Routes of Customer
-router.route("/Customer").post(CustomerController.createCustomer);
+router.route("/Customer").post(CustomerController.createCustomer).get(CustomerController.getAllCustomer);
+router.route("/Customer/:id").get(CustomerController.getCustomer).put(CustomerController.updateCustomer).delete(CustomerController.deleteCustomer);
 
 
 module.exports = router;
