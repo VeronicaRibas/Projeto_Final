@@ -39,5 +39,20 @@ module.exports = {
         } catch (error) {
             response.status(400).send(error);
         }
+},
+
+async oneCategory(request, response) {
+    try {
+        const id = request.params.id
+        const  category = await Category.findOne({where:{id}});
+
+        if(!category){
+            return response.status(400).json("Category not found!")
+         }
+
+        response.status(200).json(category);
+    } catch (error) {
+        response.status(400).send(error);
+    }
 }
 }
