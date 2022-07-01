@@ -35,4 +35,35 @@ module.exports = {
         }
     },
 
+    async UpdatePharmacist(request, response) {
+        try {
+         const {name, cpf, crf, phone, address, birthdate, gender, salary, commission, workHours, email } = request.body;
+         const id = request.params.id;
+
+         const  pharmacist = await Pharmacist.findOne({where:{id}});
+
+         if(!pharmacist){
+            return response.status(400).json("Pharmacist not found!")
+         }
+
+         pharmacist.id = id;
+         pharmacist.name = name;
+         pharmacist.cpf = cpf;
+         pharmacist.crf = crf;
+         pharmacist.phone = phone;
+         pharmacist.address = address;
+         pharmacist.birthdate = birthdate;
+         pharmacist.gender = gender;
+         pharmacist.salary = salary;
+         pharmacist.commission = commission;
+         pharmacist.workHours = workHours;
+         pharmacist.email = email;
+
+         await pharmacist.save();
+         response.status(201).json("Pharmacist Updated")
+        } catch (error) {
+            response.status(400).send(error);
+        }
+    },
+
 }
