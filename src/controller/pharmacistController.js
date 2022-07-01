@@ -35,7 +35,7 @@ module.exports = {
         }
     },
 
-    async UpdatePharmacist(request, response) {
+    async updatePharmacist(request, response) {
         try {
          const {name, cpf, crf, phone, address, birthdate, gender, salary, commission, workHours, email } = request.body;
          const id = request.params.id;
@@ -66,4 +66,18 @@ module.exports = {
         }
     },
 
+    async deletePharmacist(request, response) {
+        try {
+            const id = request.params.id;
+            const  pharmacist = await Pharmacist.destroy({where:{id}});
+
+            if(!pharmacist){
+                return response.status(400).json("Pharmacist not found!")
+             }
+
+            response.status(200).json("Pharmacist Removed! ");
+        } catch (error) {
+            response.status(400).send(error);
+        }
+    }
 }
