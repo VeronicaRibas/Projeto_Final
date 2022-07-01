@@ -10,7 +10,7 @@ Product.init({
     name: {
         type: DataTypes.STRING,
     },
-    brand: {
+    cnpj: {
         type: DataTypes.DECIMAL,
     },
     quantity: {
