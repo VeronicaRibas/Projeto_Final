@@ -3,8 +3,8 @@ const Customer = require("../models/CustomerModel");
 module.exports = {
     async getAllCustomer(request, response) {
         try {
-            const Customer = await Customer.findAll();
-            response.status(200).json(Customer);
+            const customers = await Customer.findAll();
+            response.status(200).json(customers);
         } catch (error) {
             response.status(400).send(error);
         }

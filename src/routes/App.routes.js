@@ -49,8 +49,8 @@ router.route("/customer/:id")
 
 // Routs of Pharmacist
 router.route("/pharmacist")
-.get(pharmacistController.allPharmacist)
-.post(pharmacistController.createPharmacist);
+.get(PharmacistController.allPharmacist)
+.post(PharmacistController.createPharmacist);
 
 router.route("/pharmacist/:id")
 .get(PharmacistController.onePharmacist)
