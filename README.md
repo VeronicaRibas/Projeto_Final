@@ -29,10 +29,25 @@
 - NodeJS: 
 
 #### - Para instalar as dependências da aplicação rode o seguinte comando no terminal:
- 
-    npm install
 
-#### - Para executar a aplicação rode o seguinte comando no terminal:
+:warning: Para executar essa aplicação é exigida a instalação prévia do NodeJS. Sua documentação, contendo o link de instalação pode ser acessada [aqui](https://nodejs.dev/download/).
+
+### As dependências necessárias para executar a aplicação são:
+- Express - 
+Para mais informações sobre o express, acesse a [documentação](https://expressjs.com/pt-br/starter/installing.html);
+- Sequelize -
+ Para mais informações sobre o sequelize, acesse a [documentação](https://sequelize.org/docs/v6/getting-started/);
+- SQLite3 -
+Para mais informações sobre o SQLite3, acesse a [documentação](https://www.npmjs.com/package/sqlite3).
+
+---
+Para instalar as dependências da aplicação rode o seguinte comando no terminal:
+
+     npm install <nome da dependência>
+:bulb: Para salvar as dependências no arquivo package.json, basta adicionar " --save " após o nome da dependência.
+
+---
+Para executar a aplicação rode o seguinte comando no terminal:
 
     node app.js
 
