@@ -37,12 +37,20 @@ router.route("/supplier/:id")
     .delete(SupplierController.deleteSupplier);
 
 // Routes of Customer
-router.route("/customer").post(CustomerController.createCustomer);
+router.route("/customer")
+.post(CustomerController.createCustomer)
+.get(CustomerController.getAllCustomer);
+
+router.route("/customer/:id")
+.get(CustomerController.getCustomer)
+.put(CustomerController.updateCustomer)
+.delete(CustomerController.deleteCustomer);
+
 
 // Routs of Pharmacist
 router.route("/pharmacist")
-.get(pharmacistController.allPharmacist)
-.post(pharmacistController.createPharmacist);
+.get(PharmacistController.allPharmacist)
+.post(PharmacistController.createPharmacist);
 
 router.route("/pharmacist/:id")
 .get(PharmacistController.onePharmacist)

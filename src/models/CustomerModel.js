@@ -17,22 +17,20 @@ Customer.init({
     cnpj: {
         type: DataTypes.STRING,
     },
-    type: {
-        type: DataTypes.STRING,
-    },
     phone: {
         type: DataTypes.STRING,
     },
-    address : {
+    address: {
         type: DataTypes.STRING,
     },
-    email : {
-        type: DataTypes.STRING,  
+    email: {
+        type: DataTypes.STRING,
     },
 }, {
     sequelize,
-    modelName: "Customer",
+    modelName: "customer",
     timestamps: false
 });
 
 module.exports = Customer
+
